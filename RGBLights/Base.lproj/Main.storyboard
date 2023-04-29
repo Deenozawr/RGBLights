@@ -103,6 +103,15 @@
                             <constraint firstItem="NGs-pi-Odq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wiB-bR-s78"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="A6R-Ko-D4G" id="OxA-Qf-vt7"/>
+                        <outlet property="blueSliderLabel" destination="6h4-N3-cea" id="4NT-iR-pMU"/>
+                        <outlet property="greenSlider" destination="nVw-5f-QGC" id="rY6-zv-oec"/>
+                        <outlet property="greenSliderLabel" destination="KxV-b5-yNP" id="gok-1E-laW"/>
+                        <outlet property="redSlider" destination="uVB-lS-9Jv" id="ToI-FQ-nne"/>
+                        <outlet property="redSliderLabel" destination="pSm-mV-2rv" id="CJn-TW-ZuJ"/>
+                        <outlet property="viewRGB" destination="NGs-pi-Odq" id="1pe-LJ-Kfp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
