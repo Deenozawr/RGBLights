@@ -23,8 +23,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         viewRGB.layer.cornerRadius = 10
         redSliderLabel.text = redSlider.value.formatted()
+        greenSliderLabel.text = greenSlider.value.formatted()
+
     }
 
+    @IBAction func redSliderAction() {
+        let roundedValue = redSlider.value
+        redSliderLabel.text = "\(round(roundedValue * 100) / 100)"
+    }
 
+    @IBAction func greenSliderAction() {
+        let roundedValue = greenSlider.value
+        greenSliderLabel.text = "\(round(roundedValue * 100) / 100)"
+    }
+    
+    
 }
 
