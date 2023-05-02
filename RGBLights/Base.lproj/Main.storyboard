@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="79.000000000000014" width="353" height="170.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Lp8-Yq-6vM">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Lp8-Yq-6vM">
                                 <rect key="frame" x="20" y="294.33333333333331" width="353" height="116"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WJ3-mv-CTp">
@@ -108,6 +108,8 @@
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="Lp8-Yq-6vM" firstAttribute="top" secondItem="NGs-pi-Odq" secondAttribute="bottom" constant="45" id="0Aj-3q-YR7"/>
+                            <constraint firstItem="Lp8-Yq-6vM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LN9-Nx-o4S"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lp8-Yq-6vM" secondAttribute="trailing" constant="20" id="Ooj-Bp-fnm"/>
                             <constraint firstItem="Lp8-Yq-6vM" firstAttribute="width" secondItem="NGs-pi-Odq" secondAttribute="width" id="gUA-oo-bQa"/>
                             <constraint firstItem="NGs-pi-Odq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ipe-Bj-xx0"/>
                             <constraint firstItem="NGs-pi-Odq" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:5" id="r3U-IS-UHN"/>
