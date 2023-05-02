@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet var viewRGB: UIView!
+final class ViewController: UIViewController {
+    
+    //MARK: - IBOutlets
+    @IBOutlet var viewColour: UIView!
     
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
@@ -21,22 +22,41 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewRGB.layer.cornerRadius = 10
-        redSliderLabel.text = redSlider.value.formatted()
-        greenSliderLabel.text = greenSlider.value.formatted()
-
-    }
-
-    @IBAction func redSliderAction() {
-        let roundedValue = redSlider.value
-        redSliderLabel.text = "\(round(roundedValue * 100) / 100)"
-    }
-
-    @IBAction func greenSliderAction() {
-        let roundedValue = greenSlider.value
-        greenSliderLabel.text = "\(round(roundedValue * 100) / 100)"
+        viewColour.layer.cornerRadius = 10
+        
+        redSliderLabel.text = String(format: "%.2f", round(redSlider.value * 100) / 100)
+        greenSliderLabel.text = String(format: "%.2f", round(greenSlider.value * 100) / 100)
+        blueSliderLabel.text = String(format: "%.2f", round(blueSlider.value * 100) / 100)
     }
     
+    //MARK: - IBActions
+    @IBAction func redSliderAction() {
+        redSliderLabel.text = String(format: "%.2f", round(redSlider.value * 100) / 100)
+        
+        viewColourChange()
+    }
+    
+    @IBAction func greenSliderAction() {
+        greenSliderLabel.text = String(format: "%.2f", round(greenSlider.value * 100) / 100)
+        
+        viewColourChange()
+    }
+    
+    @IBAction func blueSliderAction() {
+        blueSliderLabel.text = String(format: "%.2f", round(blueSlider.value * 100) / 100)
+        
+        viewColourChange()
+    }
+    
+    //MARK: - Private Methods
+    private func viewColourChange() {
+        let redValue = CGFloat(redSlider.value)
+        let greenValue = CGFloat(greenSlider.value)
+        let blueSlider = CGFloat(blueSlider.value)
+        let newColor = UIColor(red: redValue, green: greenValue, blue: blueSlider, alpha: 1.0)
+        
+        viewColour.backgroundColor = newColor
+    }
     
 }
 
